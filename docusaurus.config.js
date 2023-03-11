@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AED',
-  tagline: 'Algoritmos e Estruturas de Dados',
+  title: 'RC',
+  tagline: 'Redes de Computadores',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://darlonv.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/algoritmos/',
+  baseUrl: '/redes/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'darlonv', // Usually your GitHub org/user name.
-  projectName: 'algoritmos', // Usually your repo name.
+  projectName: 'redes', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'throw',

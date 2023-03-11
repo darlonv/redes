@@ -4,30 +4,31 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Algoritmos',
+    title: 'Comunicação',
     Svg: require('@site/static/img/algorithm.svg').default,
     description: (
       <>
-        Lógica de programação, estruturas de seleção, repetição e funções.
+        Introdução às redes de computadores, sockets, protocolos, pilhas
+        de protocolos.
       </>
     ),
   },
   {
-    title: 'Estruturas de Dados',
+    title: 'Segurança',
     Svg: require('@site/static/img/sort_2.svg').default,
     description: (
       <>
-        Vetores, matrizes, listas, filas e pilhas.
+        Introdução à segurança, algoritmos de criptografia, 
+        criptografia simétrica, assimétrica e assinatura digital.
       </>
     ),
   },
   {
-    title: 'Busca e Ordenação',
+    title: 'Cloud e Docker',
     Svg: require('@site/static/img/sort.svg').default,
     description: (
       <>
-        Busca sequencial e busca binária. Bubble Sort, Selection Sort, 
-        Insertion Sort, Merge Sort, Quick Sort e Radix Sort.
+        Virtualização, computação em nuvem, Docker, imagens e containers.
       </>
     ),
   },

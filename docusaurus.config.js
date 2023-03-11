@@ -66,7 +66,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'AED',
+        title: 'RC',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -104,6 +104,10 @@ const config = {
               {
                 label: 'AED',
                 href: 'https://darlonv.github.io/algoritmos',
+              },
+              {
+                label: 'RC',
+                href: 'https://darlonv.github.io/redes',
               },
               // {
               //   label: 'Discord',

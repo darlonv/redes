@@ -7,8 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Introdução a Redes de Computadores
 
-Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. 
-
+Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. É um material incompleto, e sempre estará em construção.
 
 ## Referências
 O desenvolvimento deste material deu-se tendo como referências bibliográficas principais os seguintes materiais:

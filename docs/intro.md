@@ -2,7 +2,15 @@
 sidebar_position: 1
 ---
 
-# Algoritmos e Estruturas de Dados
+# Redes de Computadores
+
+Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. 
+
+## Referências
+O desenvolvimento deste material deu-se tendo como referências bibliográficas principais os seguintes materiais:
+
+- [KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 6.ed. São Paulo: Pearson, 2013. ISBN 9788581436777.](https://plataforma.bvirtual.com.br/Acervo/Publicacao/198909) (Link biblioteca online) 
+
 
 <!-- Let's discover **Docusaurus in less than 5 minutes**.
 

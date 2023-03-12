@@ -5,9 +5,9 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Introdução a algoritmos
+# Introdução a Redes de Computadores
 
-Este conteúdo trata-se de material de apoio para a disciplina de Algoritmos e Estruturas de Dados. 
+Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. 
 
 
 ## Referências

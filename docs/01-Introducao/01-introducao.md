@@ -5,18 +5,19 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Introdução a Redes de Computadores
+# Introdução às Redes de Computadores
 
 Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. É um material incompleto, e sempre estará em construção.
 
 ## Referências
 O desenvolvimento deste material deu-se tendo como referências bibliográficas principais os seguintes materiais:
 
-- [Forbellone, André Luiz Villar; Eberspätcher, Henri Frederico. Lógica de programação: a construção de algoritmos e estruturas de dados. 4.ed. São Paulo: Pearson Prentice Hall, 2022.](https://plataforma.bvirtual.com.br/Leitor/Publicacao/323/pdf/)
-- GOODRICH, T.; TAMASSIA, R.; COPSTEIN, B. Estruturas de Dados & Algoritmos em Java. 5.ed. Porto Alegre: Bookman, 2013.
+- [KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 8.ed. São Paulo: Pearson, 2021. ISBN 9788582605592.](https://plataforma.bvirtual.com.br/Acervo/Publicacao/198909) (Link biblioteca online) 
+
+<!-- ([KUROSE 2021](https://plataforma.bvirtual.com.br/Acervo/Publicacao/198909)) -->
 
 
-
+aaabbccc
 
 <!-- 
 <details>

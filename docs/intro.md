@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 # Redes de Computadores
 
 Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. 

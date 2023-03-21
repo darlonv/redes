@@ -31,6 +31,39 @@ Caso o endereço IP do site a ser acessado ainda não seja conhecido, é utiliza
 
 Observe que inicialmente deve ser conhecido o endereço IP de um servidor DNS. Este é o servidor para que será perguntado qual é o endereço IP do site em que se deseja acessar. Este endereço pode vir configurado no sistema ou então fornecido de maneira dinâmica, pelo DHCP (*Dynamic Host Configuration Protocol*), junto com o endereço IP a ser utilizado pela máquina. Outra alternativa é definí-lo manualmente, colocando um endereço IP de um servidor DNS já conhecido.   
 
+```mermaid
+sequenceDiagram
+    Cliente  ->> Servidor DNS: Qual o IP de "pudim.com.br"?
+    Servidor DNS ->> Cliente:  54.207.20.104
+```
+
+Consultas iterativas (mais comum)
+
+```mermaid
+sequenceDiagram
+    Cliente      ->> DNS Local : IP de "ifpr.edu.br"?
+    DNS Local    ->> DNS Raiz  : IP de "ifpr.edu.br"?
+    DNS Raiz     ->> DNS Local : Consulte DNS TLD .br
+    DNS Local    ->> DNS TLD .br  : IP de "ifpr.edu.br"?
+    DNS TLD .br  ->> DNS Local : Consulte DNS autoritativo .edu.br
+    DNS Local    ->> DNS Autoritativo .edu.br  : IP de "ifpr.edu.br"?
+    DNS Autoritativo .edu.br ->> DNS Local : "54.207.20.104"
+    DNS Local    ->> Cliente  : "54.207.20.104"
+```
+
+Consultas recursivas
+```mermaid
+sequenceDiagram
+    Cliente   ->> DNS Local : IP de "ifpr.edu.br"?
+    DNS Local ->> DNS Raiz  : IP de "ifpr.edu.br"?
+    DNS Raiz  ->> DNS TLD : IP de "ifpr.edu.br"?
+    DNS TLD   ->> DNS Autoritativo : IP de "ifpr.edu.br"?
+    DNS Autoritativo ->> DNS TLD : "54.207.20.104"
+    DNS TLD   ->> DNS Raiz : "54.207.20.104"
+    DNS Raiz  ->> DNS Local : "54.207.20.104"
+    DNS Local ->> Cliente  : "54.207.20.104"
+```
+
 :::info Informação
 
 <Tabs>
@@ -84,6 +117,44 @@ Existem vários tipos de registros DNS, cada um com uma finalidade diferente. Al
 Cada registro DNS é identificado por um tipo de recurso (RR) que é definido pelo código de tipo de recurso (TRR). O código TRR é usado para identificar o tipo de registro DNS associado a um nome de domínio específico. Os registros DNS são armazenados em servidores DNS autorizados para o domínio. Quando um cliente faz uma solicitação DNS para um nome de domínio, o servidor DNS autorizado envia uma resposta contendo os registros DNS associados ao nome de domínio.
 
 ## Servidores DNS
+
+O DNS utiliza diversos servidores, organizados de forma hierárquica e distribuída no mundo inteiro. Há três tipos de servidores:
+- Raiz
+- de Domínio de Alto Nível (TLD), e;
+- Autoritativos.
+
+Estes servidores estão organizados hierarquicamente.
+
+
+```mermaid
+flowchart TD
+    RAIZ[Servidores DNS Raiz]
+
+    COM[Servidores DNS .com]
+    ORG[Servidores DNS .org]
+    EDU[Servidores DNS .edu]
+
+    FACEBOOK[Servidores DNS facebook.com]
+    AMAZON[Servidores DNS amazon.com]
+    PBS[Servidores DNS pbs.org]
+    NYU[Servidores DNS nyu.edu]
+    UMASS[Servidores DNS umass.edu]
+
+    RAIZ --> COM
+    RAIZ --> ORG
+    RAIZ --> EDU
+
+    COM --> FACEBOOK
+    COM --> AMAZON
+
+    ORG --> PBS
+
+    EDU --> NYU
+    EDU --> UMASS
+
+
+```
+(Imagem adaptada de KUROSE,2021).
 
 O vídeo abaixo (em inglês) apresenta um resumo do funcionamento dos servidores DNS.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/27r4Bzuj5NQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

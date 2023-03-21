@@ -9,7 +9,7 @@ O Protocolo HTTP (_**H**iper**T**ext **T**ransfer **P**rotocol_) é um protocolo
 
 Em termos simples, o HTTP permite que um cliente (como um navegador web) solicite informações a um servidor web e receba uma resposta. Essa comunicação é realizada através da troca de mensagens HTTP entre o cliente e o servidor.
 
-O HTTP é um protocolo de camada de aplicação que utiliza a arquitetura cliente-servidor. Ele é baseado em um modelo de requisição-resposta, onde o cliente envia uma requisição ao servidor, e o servidor responde com uma mensagem de resposta.
+O HTTP é um protocolo de camada de aplicação que utiliza a arquitetura cliente-servidor, tendo a porta 80 como padrão. Ele é baseado em um modelo de requisição-resposta, onde o cliente envia uma requisição ao servidor, e o servidor responde com uma mensagem de resposta.
 
 A mensagem HTTP é composta por um cabeçalho e um corpo. O cabeçalho contém informações sobre a mensagem, como o tipo de requisição ou resposta, o tamanho do conteúdo, os cookies e outras informações. O corpo contém os dados da mensagem, como o conteúdo HTML, imagens ou outros arquivos.
 

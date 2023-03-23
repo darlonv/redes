@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Comunicação',
-    Svg: require('@site/static/img/algorithm.svg').default,
+    Svg: require('@site/static/img/message.svg').default,
     description: (
       <>
         Introdução às redes de computadores, sockets, protocolos, pilhas
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Segurança',
-    Svg: require('@site/static/img/sort_2.svg').default,
+    Svg: require('@site/static/img/key.svg').default,
     description: (
       <>
         Introdução à segurança, algoritmos de criptografia, 
@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'Cloud e Docker',
-    Svg: require('@site/static/img/sort.svg').default,
+    Svg: require('@site/static/img/cloud.svg').default,
     description: (
       <>
         Virtualização, computação em nuvem, Docker, imagens e containers.

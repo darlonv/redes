@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Redes de Computadores
 
-Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. 
+Este conteúdo trata-se anotações para a disciplina de Redes de Computadores. Está e sempre estará em constante mudança, atualização e correção.
 
 ## Referências
 O desenvolvimento deste material deu-se tendo como referências bibliográficas principais os seguintes materiais:

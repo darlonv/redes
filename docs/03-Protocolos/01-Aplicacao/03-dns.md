@@ -116,6 +116,41 @@ Existem vários tipos de registros DNS, cada um com uma finalidade diferente. Al
 
 Cada registro DNS é identificado por um tipo de recurso (RR) que é definido pelo código de tipo de recurso (TRR). O código TRR é usado para identificar o tipo de registro DNS associado a um nome de domínio específico. Os registros DNS são armazenados em servidores DNS autorizados para o domínio. Quando um cliente faz uma solicitação DNS para um nome de domínio, o servidor DNS autorizado envia uma resposta contendo os registros DNS associados ao nome de domínio.
 
+## Ferramentas
+
+### nslookup
+Uma ferramenta que resolve registros DNS é o `nslookup`
+
+:::info Sintaxe
+```sh
+nslookop <-type=tipo> <SERVER>
+```
+Parâmetros:
+- -type: corresponde ao tipo de registro. Opcional.
+- SERVER : servidor DNS a ser consultado. Caos seja omitido, usa o DNS configurado na máquina
+:::
+
+**Exemplos**  
+
+- Realize as consultas a seguir utilizando `nslookup` e observe os resultados obtidos.
+    - `nslookup google.com`
+    - `nslookup google.com 8.8.8.8`
+    - `nslookup -type=a google.com 8.8.8.8`
+    - `nslookup -type=aaaa google.com 8.8.8.8`
+    - `nslookup -type=mx google.com`
+    - `nslookup -type=a pudim.com.br`
+    - `nslookup -type=aaaa pudim.com.br`
+    - `nslookup -type=TXT facebook.com`
+
+
+<!-- <iframe class="slideshow" src="./slideshow.html" frameborder=0></iframe> -->
+
+<html>
+<iframe src="/redes/bla">aaa</iframe>
+</html>
+
+
+
 ## Servidores DNS
 
 O DNS utiliza diversos servidores, organizados de forma hierárquica e distribuída no mundo inteiro. Há três tipos de servidores:

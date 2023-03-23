@@ -77,13 +77,80 @@ Connection: keep-alive
 
 Quando o servidor recebe uma requisição HTTP, ele processa a requisição e envia uma resposta de volta para o cliente. A resposta HTTP também é composta por um cabeçalho e um corpo.
 
-O cabeçalho HTTP da resposta contém informações sobre o resultado da requisição, como o código de status HTTP, que indica se a requisição foi bem-sucedida ou não. Alguns códigos de status comuns incluem:
+### Códigos HTTP
 
+O cabeçalho HTTP da resposta contém informações sobre o resultado da requisição, como o código de *status* da requisição HTTP. Cada código HTTP é cada por um valor entre 100 e 600, e os códigos estão organizados em 5 categorias:
+
+|Categoria        |Faixa de valores|
+|-----------------|---------|
+|Informacional    |100 a 199|
+|Sucesso          |200 a 299|
+|Redirecionamento |300 a 399|
+|Erro no cliente  |400 a 499|
+|Erro servidor    |500 a 599|
+
+
+Alguns códigos comuns incluem:
+
+```mermaid
+flowchart LR
+  %% Vértices
+  CLIENT[Cliente]
+  SERVER[Servidor]
+
+  %% Arestas
+  CLIENT --> |"GET, HEAD, PUT, POST"| SERVER
+  SERVER --> |"
+  200 OK
+  201 Created (POST)
+  204 No Content
+  "| CLIENT
+```
+
+**Exemplos**  
+
+```mermaid
+sequenceDiagram
+  CLIENT ->> SERVER : Request ✅ GET, HEAD, PUT, POST
+  SERVER ->> CLIENT : 200 OK<br>201 Created (POST)<br>204 No Content
+```
 - `200 OK`: A requisição foi bem-sucedida e o servidor retornou os dados solicitados.
+- `201 Create`: .
+- `204 No Content`: .
 
+```mermaid
+sequenceDiagram
+  CLIENT ->> SERVER : Request ✅
+  SERVER ->> CLIENT : 301 Moved Permanently<br>302 Found (Temporarily)
+```
+
+- `301 Moved Permanently`: .
+- `302 Found (Temporarily)`: .
+
+```mermaid
+sequenceDiagram
+  CLIENT ->> SERVER : Request ❌
+  SERVER ->> CLIENT : 400 Bad Request <br> 401 Unauthorized <br> 403 Forbidden <br> 404 Not Found
+```
+
+- `400 Bad Request`: .
+- `401 Unauthorized`: .
+- `403 Forbidden`: .
 - `404 Not Found`: O servidor não encontrou o recurso solicitado pelo cliente.
 
+```mermaid
+sequenceDiagram
+  CLIENT ->> SERVER : Request ✅
+  Note right of SERVER: ❌ Erro no servidor
+  SERVER ->> CLIENT : 500 Internal Server Error <br> 501 Not Implemented <502> Bad Gateway <br> 503 Service Unavailable <br> 504 Gateway Timeout
+```
+
 - `500 Internal Server Error`: O servidor encontrou um erro ao processar a requisição.
+- `501 Not Implemented`: .
+- `502 Bad Gateway`: .
+- `502 Service Unavailable`: .
+- `504 Gateway Timeout`: .
+
 
 O corpo da mensagem contém os dados da resposta, como o conteúdo HTML, imagens ou outros arquivos.
 

@@ -66,8 +66,8 @@ Em que:
 
 **Exemplos**
 
-- [http://www.exemplo.com/pagina.html?parametro1=valor1&amp;parametro2=valor2]("")
-- [http://darlonv.github.io:8080/redes?aula=dns#url]("")
+- `http://www.exemplo.com/pagina.html?parametro1=valor1&amp;parametro2=valor2`
+- `http://darlonv.github.io:8080/redes?aula=dns#url`
 
 
 As requisições HTTP são compostas por um método, uma URL  e um cabeçalho, seguido pelo corpo da mensagem, que é opcional. Métodos comuns são `GET`, `POST`, `PUT`, `DELETE` e `HEAD`.

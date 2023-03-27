@@ -45,13 +45,45 @@ ssh root@10.1.1.1 apt update
 Lembre-se que após logar com o ssh, os comandos serão executados na máquina **remota**, e não mais na máquina local. Por exemplo, executar o comando `poweroff`, desligará a máquina remota.
 :::
 
-
 **Atividade**  
-Acesse o servidor criado na máquina virtual, com os usuários:
+Acesse o servidor apontado pelo professor, com os usuários:
 - *aluno*
 - *root*  
 
 Qual a diferença?  
+
+**Atividade**
+- Na máquina remota, execute os seguintes comandos:
+    - `who`
+Analise os resultados.
+
+
+**Atividade**
+- Execute em sua máquina o servidor SSH dentro de um *container*:
+
+```sh
+docker pull darlon/ssh
+docker run --rm -d --name ssh -p 2222:22  darlon/ssh
+```
+
+Para fechar o servidor:
+
+```sh
+docker stop ssh
+```
+
+- Em seguida, conecte a essa máquina.
+
+```sh
+ssh -p 2222 <seu endereço ip>
+```
+
+**Atividade**
+- Conecte ao servidor SSH em uma outra máquina.
+
+```sh
+ssh -p 2222 <endereço ip>
+```
 
 
 **Atividade**  

@@ -1,0 +1,13 @@
+FROM ubuntu
+
+RUN apt update -qq
+RUN apt -y install wget openssh-server -qq
+RUN apt -y install vim net-tools -qq
+
+RUN touch /run/utmp
+RUN chown root:utmp /run/utmp; chmod g+w /run/utmp
+
+RUN service ssh start
+
+EXPOSE 2222
+CMD ["/usr/sbin/sshd","-D"]

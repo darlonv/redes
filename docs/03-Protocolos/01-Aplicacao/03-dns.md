@@ -145,11 +145,6 @@ Parâmetros:
 
 <!-- <iframe class="slideshow" src="./slideshow.html" frameborder=0></iframe> -->
 
-<html>
-<iframe src="/redes/bla">aaa</iframe>
-</html>
-
-
 
 ## Servidores DNS
 
@@ -163,6 +158,7 @@ Estes servidores estão organizados hierarquicamente.
 
 ```mermaid
 flowchart TD
+    %%{init: {'flowchart' : {'curve' : 'stepAfter'}}}%%
     RAIZ[Servidores DNS Raiz]
 
     COM[Servidores DNS .com]

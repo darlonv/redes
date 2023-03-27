@@ -35,7 +35,44 @@ A porta padrão utilizada pelo HTTP é a `80`.
 
 O HTTP é um protocolo cliente-servidor baseado em requisição-resposta. Isso significa que um cliente (como um navegador *web*) envia uma requisição a um servidor *web* e o servidor envia uma resposta de volta para o cliente.
 
-As requisições HTTP são compostas por um método, um URI (_**U**niform **R**esource **I**dentifier_) e um cabeçalho, seguido pelo corpo da mensagem, que é opcional. Métodos comuns são `GET`, `POST`, `PUT`, `DELETE` e `HEAD`.
+### Requisição e respostas
+
+### URL
+
+Uma parte importante das requisições HTTP são as URLs (_**U**niform **R**esource **L**ocator_). Uma URL é um endereço que especifica a localização de um recurso na **web**. As URLs são usadas para acessar recursos, como páginas da **web**, imagens, arquivos de áudio ou vídeo, etc. na internet. Uma URL HTTP é composta por vários componentes que especificam diferentes partes do endereço.
+
+A estrutura de uma URL pode ser entendida como:
+
+:::info Sintaxe
+
+```url
+<protocolo>://<domínio ou ip>:<porta>/<caminho>?<parametros>=<valores>&<parametros>=<valores>#<fragmentos>
+```
+
+Em que:
+
+- Protocolo: O protocolo usado para acessar o recurso, neste caso, o protocolo HTTP.
+
+- Domínio: O nome de domínio do servidor web que hospeda o recurso, neste exemplo, "www.exemplo.com". Pode ser substituído também pelo endereço IP do servidor.
+
+- Caminho: O caminho para o recurso no servidor web, neste exemplo, "/pagina.html".
+
+- Parâmetros de consulta: Os parâmetros adicionais que são passados para o servidor web com a solicitação, separados por "&".
+
+- Fragmentos: são indicações de onde a barra de rolagem do navegador deve estar na página. Não altera o funcionamento da página ou de seus recursos.
+
+:::
+
+
+**Exemplos**
+
+- [http://www.exemplo.com/pagina.html?parametro1=valor1&amp;parametro2=valor2]("")
+- [http://darlonv.github.io:8080/redes?aula=dns#url]("")
+
+
+As requisições HTTP são compostas por um método, uma URL  e um cabeçalho, seguido pelo corpo da mensagem, que é opcional. Métodos comuns são `GET`, `POST`, `PUT`, `DELETE` e `HEAD`.
+
+### Métodos
 
 - `GET`: Solicita uma representação do recurso identificado pelo URI. É usado para recuperar informações do servidor.
 
@@ -155,27 +192,6 @@ sequenceDiagram
 O corpo da mensagem contém os dados da resposta, como o conteúdo HTML, imagens ou outros arquivos.
 
 Em resumo, o funcionamento básico do HTTP é baseado em requisição-resposta, com o cliente enviando uma requisição HTTP para o servidor e o servidor enviando uma resposta HTTP de volta para o cliente. O HTTP é um protocolo simples e eficiente que permite que as aplicações web se comuniquem de forma padronizada e confiável.
-
-## URL
-
-Os navegadores *web* utilizam as URL (*Uniform Resource Locator*). Uma URL é um endereço que especifica a localização de um recurso na **web**. As URLs são usadas para acessar recursos, como páginas da **web**, imagens, arquivos de áudio ou vídeo, etc. na internet. Uma URL HTTP é composta por vários componentes que especificam diferentes partes do endereço.
-
-**Exemplo**
-- URL:
-
-```
-http://www.exemplo.com/pagina.html?parametro1=valor1&parametro2=valor2
-```
-
-- Protocolo: O protocolo usado para acessar o recurso, neste caso, o protocolo HTTP.
-
-- Domínio: O nome de domínio do servidor web que hospeda o recurso, neste exemplo, "www.exemplo.com". Pode ser substituído também pelo endereço IP do servidor.
-
-- Caminho: O caminho para o recurso no servidor web, neste exemplo, "/pagina.html".
-
-- Parâmetros de consulta: Os parâmetros adicionais que são passados para o servidor web com a solicitação, separados por "&". Neste exemplo, os parâmetros são "parametro1=valor1" e "parametro2=valor2".
-
-
 
 ## Conexões
 

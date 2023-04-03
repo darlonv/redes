@@ -1,5 +1,3 @@
-# Código adaptado de GORSKI, 2018. https://davidgorski.ca/posts/sessions/
-
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
 

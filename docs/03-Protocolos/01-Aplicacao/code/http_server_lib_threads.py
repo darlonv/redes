@@ -6,7 +6,6 @@ from time import sleep
 address = '0.0.0.0'
 port= 8088
 
-from http.cookies import SimpleCookie
 
 
 class Handler(BaseHTTPRequestHandler):

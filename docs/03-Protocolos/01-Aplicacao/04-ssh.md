@@ -127,3 +127,28 @@ Para esta atividade, utilize servidor e endereço IP informado pelo professor.
 - Qual é o conteúdo do arquivo `campus.jpg`, que está no servidor?
 - Envie um arquivo do seu computador para o servidor.
 - Copie o diretório `trabalhos` para o seu computador.
+
+**Atividades**
+
+Algumas destas perguntas requerem pesquisas.
+
+- Como você pode verificar se o SSH está instalado em sua máquina local?
+
+- Qual é o número de porta utilizada por padrão pelo SSH?
+
+- Como você pode se conectar a um servidor remoto usando SSH a partir de sua máquina local?
+
+- Como você pode gerar um par de chaves SSH pública e privada em sua máquina local?
+
+- Como você pode copiar sua chave pública para um servidor remoto para autenticação sem senha?
+
+- Como você pode alterar a porta padrão usada pelo SSH em um servidor remoto?
+
+- Como você pode definir permissões para arquivos e diretórios usando o SSH?
+
+- Como você pode fazer transferência de arquivos entre sua máquina local e um servidor remoto usando o SSH?
+
+- Como você pode encaminhar portas usando o SSH?
+
+- Como você pode fazer uma conexão reversa com o SSH?
+

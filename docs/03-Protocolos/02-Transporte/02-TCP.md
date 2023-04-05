@@ -19,7 +19,7 @@ Figura: Cabeçalho do pacote TCP.
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4e/TCP_Protocol_Diagram.png)  
 Fonte: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TCP_Protocol_Diagram.png)  
 
-### Campos
+**Campos**  
 - Porta de origem
 - Porta de destino
 - Número de sequência (seq)
@@ -33,7 +33,7 @@ Fonte: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TCP_Protocol_
 - Opções
 - Dados
 
-### Flags
+**_Flags_**  
 As *flags* do TCP são:
 - URG: *urgent*. Indica que o processo que solicitou o envio do marcou dados como urgente
 - ACK: *acknowledgement*, ou reconhecimento
@@ -134,7 +134,7 @@ Fonte: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TCP_CLOSE.svg
 <!-- ![finish](https://upload.wikimedia.org/wikipedia/commons/7/75/TCP_termination.png)  
 Fonte: [Wikimedia Commons](https://pt.wikipedia.org/wiki/Ficheiro:TCP_termination.png)  -->
 
-### Exemplo
+**Exemplo**  
 Captura de pacotes de uma conexão TCP.
 - Server:
     ```shell
@@ -183,7 +183,7 @@ Captura de pacotes de uma conexão TCP.
             - 7: servidor envia FIN e ACK
             - 8: cliente envia ACK
     
-### Observação
+**Observação**  
 Na execução do exemplo, utilize diferentes números de portas caso esteja utilizando um ambiente de execução compartilhado.
 
 **Atividade**  
@@ -237,7 +237,7 @@ sintaxe:
 - `of`: *output file*, com nome do arquivo a ser gerado.
 - `bs`: *block size*, com o tamanho do arquivo, em bytes.
 
-#### Exemplo
+**Exemplo**  
 Execute os comandos abaixo, em diferentes terminais  
 - Terminal 1: servidor netcat
 > nc -l 10100
@@ -247,7 +247,7 @@ Term
 - Terminal 3: netcat client
 > dd if=/dev/zero count=1 bs=10M | nc localhost 10100
 
-# Referências
+## Referências
 
 [KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 6.ed. São Paulo: Pearson, 2013. ISBN 9788581436777.](https://plataforma.bvirtual.com.br/Leitor/Publicacao/3843/pdf/23?code=opaQM91XXDo3M6f51IIiU5X7T6DUUY4tnUbUN9g9xAn0nY6qeBM0WLTVwycNe9XtrqzhJL34gWxykS9MrPGJQA==) (Link biblioteca online)  
 
@@ -257,7 +257,7 @@ Term
 
 
 
-## Outras referências
+**Outras referências**  
 [Wikimedia Commons. Three-way handshake.](https://upload.wikimedia.org/wikipedia/commons/8/8a/Tcp-handshake.png)  
 [Wikimedia Commons. TCP Header.](https://commons.wikimedia.org/wiki/File:TCP_Protocol_Diagram.png)  
 [BEZERRA, R. M. A camada de transporte. Notas de aula: Redes de computadores II. CEFET/BA, 2008](https://egroupware.ufba.br/~romildo/downloads/ifba/transporte.pdf)  

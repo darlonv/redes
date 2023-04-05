@@ -112,9 +112,24 @@ Adicionalmente, pode-se utilizar o simulador disponível no link abaixo.
 
 ### Término da conexão
 
+```mermaid
+sequenceDiagram
+    %%{init: {'theme': 'neutral' } }%%
+    participant Cliente
+    participant Servidor
+    note over Cliente,Servidor: Conexão estabelecida
+    note over Cliente: encerramento ativo
+    Cliente  ->>+  Servidor: fin
+    Servidor ->>-  Cliente: ack
+    note over Servidor: encerramento passivo
+    Servidor ->>  Cliente: fin
+    Cliente  ->>  Servidor: ack
+    note over Cliente,Servidor: Conexão finalizada
 
-![finish](https://upload.wikimedia.org/wikipedia/commons/5/55/TCP_CLOSE.svg)  
-Fonte: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TCP_CLOSE.svg) 
+```
+
+<!-- ![finish](https://upload.wikimedia.org/wikipedia/commons/5/55/TCP_CLOSE.svg)  
+Fonte: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TCP_CLOSE.svg)  -->
 
 <!-- ![finish](https://upload.wikimedia.org/wikipedia/commons/7/75/TCP_termination.png)  
 Fonte: [Wikimedia Commons](https://pt.wikipedia.org/wiki/Ficheiro:TCP_termination.png)  -->

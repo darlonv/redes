@@ -119,8 +119,8 @@ sequenceDiagram
     participant Servidor
     note over Cliente,Servidor: Conexão estabelecida
     note over Cliente: encerramento ativo
-    Cliente  ->>+  Servidor: fin
-    Servidor ->>-  Cliente: ack
+    Cliente  ->>  Servidor: fin
+    Servidor ->>  Cliente: ack
     note over Servidor: encerramento passivo
     Servidor ->>  Cliente: fin
     Cliente  ->>  Servidor: ack

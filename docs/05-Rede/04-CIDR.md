@@ -1,10 +1,14 @@
----
-sidebar_position: 3
----
+
 
 # CIDR
 
 Ao observar as classes de IPs, percebe-se que a forma como elas são projetadas não é possível que cada máquina ligada à internet possua um único endereço. 
+
+Neste ponto, convém observarmos que um endereço IP pode ser das seguintes categorias:
+
+- Endereço de rede: este é o primeiro endereço IP possível em uma determinada rede, e não pode ser atribuído a um *host*. Este também é dito ser o nome da rede.
+- Endereço de *host*: endereço de uma máquina em uma rede.
+- Endereço de *broadcast*: endereço utilizado para se comunicar com todas as máquinas de uma rede simultaneamente. É o último endereço de IP possível em uma rede.
 
 ## Sub-redes
 
@@ -13,7 +17,7 @@ Uma sub-rede é uma ilha de comunicação isolada, um conjuntos de *hosts* que e
 Vale observar que um endereço IP é atribuído a cada **interface** dos dispositivos, e se um roteador interconecta várias sub-redes, ele pode possuir várias interfaces, e consequentemente, vários endereços IP.
 
 ## CIDR
-Um mecanismo para trabalhar com redes de maneira interna, onde deve ser especificado **quantos bits** do endereço devem ser reservados para a redes e quantos devem ser reservados para *hosts* é o *Classless Inter-Domain Routing* (roteamento inter domínio sem classes), o CIDR.
+Um mecanismo para trabalhar com redes de maneira interna, onde deve ser especificado **quantos bits** do endereço devem ser reservados para a redes e quantos devem ser reservados para *hosts* é o *Classless Inter-Domain Routing* (roteamento inter domínio sem classes), o CIDR, especificado nos RFCs [1517](https://datatracker.ietf.org/doc/html/rfc1517), [1518](https://datatracker.ietf.org/doc/html/rfc1518), [1519](https://datatracker.ietf.org/doc/html/rfc1519) e [1520](https://datatracker.ietf.org/doc/html/rfc1520).
 
 O endereçamento utilizando CIDR, consiste em uma informação adicional chamada **máscara** de sub-rede, que pode ser representada de diferentes maneiras:
 - após o endereço, separado por /

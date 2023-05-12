@@ -1,34 +1,30 @@
----
-sidebar_position: 2
----
-
-# Classes de IP
 
 
-Cada interface deve possui um endereço único para identificação, o *Internet address* (IP). Um endereço IP é composto por um valor de 32 bits.
+# Classes
 
-Para representar um endereço IP, a notação utilizada é a *dotted-decimal*, que consiste em utilizar 4 números decimais separados por ponto. Cada número consiste em um valor de 8 bits (octeto), ou seja, números no intervalo de 0 a 255.
+## Tipos de transmissão
 
-**Exemplos**
+Antes de discutirmos sobre as classes, convém observarmos os diferentes tipos de transmissão.
 
-|Endereço|
-|---|
-|10.0.1.50|
-|192.128.122.1|
-|192.168.0.100|
-|179.154.41.4|
+- Unicast: destino único
+- Multicast: vários destinos
+- Broadcast: todos os destinos da mesma rede
+- Anycast: qualquer destino
+
+## Classes de IP
 
 
-## Classes
+
+
 Inicialmente, os endereçamento utilizado no protocolo IP foi planejado para que parte dele representasse a rede e parte representasse máquinas dessa rede.
 
 De forma a saber quantas máquinas são possíveis de incluir em tais redes, foram criadas as **classes** de IP.
 
 Parte do endereço contém a identificação da rede (*netid*) e parte contém a identificação da máquina (*hostid*).
 
-Os bits iniciais do endereço servem para identificar a classe à qual aquele endereço corresponde.
+Os bits iniciais do endereço (1º octeto) servem para identificar a classe à qual aquele endereço corresponde.
 
-|Classe| Bits|*Range*|
+|Classe| Bits iniciais|intervalo|
 |------|-----|-------|
 |A|`0`|`0`-`127`|
 |B|`10`|`128`-`191`|
@@ -36,15 +32,15 @@ Os bits iniciais do endereço servem para identificar a classe à qual aquele en
 |D|`1110`|`224`-`239`|
 |E|`1111`|`240`-`255`|
 
-As classes **A**, **B** e **C** foram projetadas para endereços *unicast*, ou seja, endereçam uma única interface. A classe **D** serve para endereços *multicast*, e a classe **E** são endereços reservados.
+As classes **A**, **B** e **C** foram projetadas para endereços *unicast*, ou seja, endereçam *hosts*. As classes **D** e **E** são especiais, em que a classe **D** serve para endereços *multicast*, e a classe **E** é destinada para experimentação.
 
 As classes indicam quantos bits devem ser utilizados para *net* e *host*, sendo 8, 16 e 24 para *net* nas classes A, B e C, respectivamente.
 
-|Classe|*netid* total|*netid* ocupado| *netid* livre| *hostid*|
-|------|-------------|---------------|--------------|---------|
-|A     |8            |1              |7             |24       |
-|B     |16           |2              |14            |16       |
-|C     |24           |3              |21            |8        |
+|Classe|*netid* total|*netid* ocupado| *netid* livre| *hostid*|Quantidade de endereços por rede|
+|------|-------------|---------------|--------------|---------|-----------------------|
+|A     |8            |1              |7             |24       |16777216|
+|B     |16           |2              |14            |16       |65356|
+|C     |24           |3              |21            |8        |256|
 
 Com isto, a quantidade total de endereços para cada classe:
 
@@ -84,9 +80,39 @@ Com isto, a quantidade total de endereços para cada classe:
 **Exercício**
 - Desenvolva uma função que a  partir do end. IP, retorna a classe à qual o endereço pertence.
 
+## Endereços restritos e privados
+
+A RFC 1918 
+
+Os endereços restritos ou privados existem apenas em redes internas, ou seja, não são retransmitidos por roteadores.
+
+10.0.0.0 /8 
+172.16.0.0/12
+192.168.0.0/16
+
+IPs reservados
+
+172.0.0.0 / 8 *loopback* (localhost)
+169.254.0.0 / 16 APIPA ( *Automatic Private IP Addressing* - Endereço autoatribuído)
+0.0.0.0/8 IP de inicialização
+255.255.255.255 Broadcast
+
+
+### Classe D
+
+
+
+### Classe E
+
+Os endereços da classe **E** são destinados para testes utilizando novas tecnologias, e por isso não são atribuídos na Internet. 
+
 ## Referências
 
-STEVENS, W. Richard. TCP/IP illustrated, vol. I: the protocols. Addison Wesley, 1994.
+- STEVENS, W. Richard. TCP/IP illustrated, vol. I: the protocols. Addison Wesley, 1994.
+
+**Outros materiais**  
+- [FERNANDEZ, F.L., DUARTE, O.C.M.B. Roteamento IP. Universidade Federal do Rio de Janeiro.](https://www.gta.ufrj.br/grad/99_1/fernando/roteamento/index.htm)  
+
 
  
 

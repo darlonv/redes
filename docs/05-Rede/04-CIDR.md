@@ -20,25 +20,31 @@ Vale observar que um endereço IP é atribuído a cada **interface** dos disposi
 Um mecanismo para trabalhar com redes de maneira interna, onde deve ser especificado **quantos bits** do endereço devem ser reservados para a redes e quantos devem ser reservados para *hosts* é o *Classless Inter-Domain Routing* (roteamento inter domínio sem classes), o CIDR, especificado nos RFCs [1517](https://datatracker.ietf.org/doc/html/rfc1517), [1518](https://datatracker.ietf.org/doc/html/rfc1518), [1519](https://datatracker.ietf.org/doc/html/rfc1519) e [1520](https://datatracker.ietf.org/doc/html/rfc1520).
 
 O endereçamento utilizando CIDR, consiste em uma informação adicional chamada **máscara** de sub-rede, que pode ser representada de diferentes maneiras:
-- após o endereço, separado por /
-    > **Exemplo**  
-    > 
-    > `10.1.1.1/24`
-    
-    Nesta notação o número logo após a / corresponde ao **número de bits** dedicados à rede.
+- após o endereço, separado por /  
+
+**Exemplo**  
+```
+10.1.1.1/24
+```
+
+Nesta notação o número logo após a / corresponde ao **número de bits** dedicados à rede.
 
     
-- No formato *dotted-decimal*
-    > **Exemplo**  
-    > 
-    > `255.255.255.0`
-    
-    Nesta notação, os bits da máscara referentes a cada octeto são convertidos para a base decimal.
+- No formato *dotted-decimal*  
+
+**Exemplo**  
+```
+255.255.255.0
+```
+
+Nesta notação, os bits da máscara referentes a cada octeto são convertidos para a base decimal.
     
 - No formato binário
-    > **Exemplo**  
-    >
-    > `11111111.11111111.11111111.00000000`
+
+**Exemplo**  
+```
+11111111.11111111.11111111.00000000
+```
     
 Repare que nos exemplos acima, a máscara de sub-rede é a mesma, o que altera é apenas sua representação.
 

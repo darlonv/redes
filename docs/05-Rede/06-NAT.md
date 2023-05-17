@@ -2,11 +2,15 @@
 
 # NAT
 
+NAT (*Network Address Translation*) é um mecanismo que possibilita que diversos *hosts* em uma sub-rede acessem a internet utilizando um mesmo endereço. A implementação do NAT é realizada na borda da rede.
+
+O processo do NAT consiste em modificar os pacotes que saem e entram na rede, tendo seu controle realizado por uma tabela, responsável pela tradução dos endereços.
+
 
 
 ## Referências
 
-[KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 6.ed. São Paulo: Pearson, 2013. ISBN 9788581436777.](https://plataforma.bvirtual.com.br/Leitor/Publicacao/3843/pdf/23?code=opaQM91XXDo3M6f51IIiU5X7T6DUUY4tnUbUN9g9xAn0nY6qeBM0WLTVwycNe9XtrqzhJL34gWxykS9MrPGJQA==) (Link biblioteca online)
+KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 3.ed. São Paulo: Pearson, 2005.
 
 STEVENS, W. Richard. TCP/IP illustrated, vol. I: the protocols. Addison Wesley, 1994.
 

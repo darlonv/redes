@@ -2,23 +2,15 @@
 
 # VLSM
 
+O VLSM (*Variable Length Subnet Masking*) possibilita que no espaço de endereçamento destinado a uma rede de uma determinada classe, é possível que sejam definidos sub-redes com diferentes quantidades de máquinas.
 
+
+Tomemos como exemplo uma rede classe C, que possui 24 bits dedicados à definição da rede. Poderíamos dividir o espaço de máquinas em 8 sub-redes, utilizando a máscara /27. Desta forma, cada sub-rede poderia ter 30 *hosts*.
+
+A utilização do VLSM possibilita que ao invés de todo o espaço disponível a *hosts* da classe C seja dividido de maneira igual, é permitido que as sub-redes sejam divididas. Com isto, dentro da rede classe C poderia haver a sub-rede /25 (126 *hosts*), /26 (62 *hosts*), /28 (14 *hosts*) e assim sucessivamente.
 
 ## Referências
 
-[KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 6.ed. São Paulo: Pearson, 2013. ISBN 9788581436777.](https://plataforma.bvirtual.com.br/Leitor/Publicacao/3843/pdf/23?code=opaQM91XXDo3M6f51IIiU5X7T6DUUY4tnUbUN9g9xAn0nY6qeBM0WLTVwycNe9XtrqzhJL34gWxykS9MrPGJQA==) (Link biblioteca online)
-
-STEVENS, W. Richard. TCP/IP illustrated, vol. I: the protocols. Addison Wesley, 1994.
 
 **Outros materiais**  
 
-[IP Subnet Calculator](http://www.subnet-calculator.com/subnet.php?)  
-[Network Calculators](http://www.subnetmask.info)  
-
-<!-- **Licenças**
-
-[Ícones. *Designed by Freepik from Flaticon*](https://www.flaticon.com/packs/cloud-computing-network-3?k=1600883307690)   -->
-
-
-
- 

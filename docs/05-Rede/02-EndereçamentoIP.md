@@ -6,11 +6,11 @@ Cada interface deve possui um endereço único para identificação, o *Internet
 
 O endereçamento é parte do cabeçalho do protocolo IP, que possui duas versões, IPv4 e IPv6. Ressalta-se que são **protocolos** diferentes da camada de rede.
 
-## Ipv4 
+## IPv4 
 
 No IPv4, o endereço é composto por um valor de 32 bits.
 
-Para representar um endereço IP, a notação utilizada é a *dotted-decimal*, que consiste em utilizar 4 valores decimais separados por ponto. Cada valor consiste em um número de 8 bits (octeto), ou seja, está no intervalo de 0 a 255.
+Para representar um endereço IP, a notação utilizada é a *dotted-decimal*, que consiste em utilizar 4 valores decimais separados por ponto. Cada valor consiste em um número de 8 bits (octeto), ou seja, pertence ao intervalo de valores 0 a 255.
 
 **Exemplos**
 
@@ -33,7 +33,5 @@ Para representar um endereço IP, a notação utilizada é a *dotted-decimal*, q
 |binário|11000000|10101000|00000001|00001100|
 
 ## IPv6
-Representado em hexadecimal, utilizando 128 bits
 
-
-ffff:ffff:ffff:ffff:ffff:ffff
+O IPv6 será apresentado em detalhes mais adiante.

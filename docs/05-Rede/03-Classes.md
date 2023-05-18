@@ -6,15 +6,12 @@
 
 Antes de discutirmos sobre as classes, convém observarmos os diferentes tipos de transmissão.
 
-- Unicast: destino único
-- Multicast: vários destinos
-- Broadcast: todos os destinos da mesma rede
-- Anycast: qualquer destino
+- *Unicast*: destino único
+- *Multicast*: vários destinos
+- *Broadcast*: todos os destinos da mesma rede
+- *Anycast*: qualquer destino
 
 ## Classes de IP
-
-
-
 
 Inicialmente, os endereçamento utilizado no protocolo IP foi planejado para que parte dele representasse a rede e parte representasse máquinas dessa rede.
 
@@ -82,20 +79,24 @@ Com isto, a quantidade total de endereços para cada classe:
 
 ## Endereços restritos e privados
 
-A RFC 1918 
+Os endereços restritos ou privados existem apenas em redes internas, ou seja, não são retransmitidos por roteadores. Estes são definidos pela [RFC1918](https://datatracker.ietf.org/doc/html/rfc1918).
 
-Os endereços restritos ou privados existem apenas em redes internas, ou seja, não são retransmitidos por roteadores.
+|Rede | Faixa |
+|-----|-------|
+|10.0.0.0/8    | de 10.0.0.0  a 10.255.255.255 |
+|172.16.0.0/12  | de 172.16.0.0 a 172.31.255.255 |
+|192.168.0.0/16 | de 192.168.0.0 a 192.168.255.255 |
 
-10.0.0.0 /8 
-172.16.0.0/12
-192.168.0.0/16
+### Endereços reservados
 
-IPs reservados
+Alguns endereços são reservados para finalidades pontuais.
 
-172.0.0.0 / 8 *loopback* (localhost)
-169.254.0.0 / 16 APIPA ( *Automatic Private IP Addressing* - Endereço autoatribuído)
-0.0.0.0/8 IP de inicialização
-255.255.255.255 Broadcast
+|Endereço|Finalidade|
+|--------|----------|
+|172.0.0.0 / 8 |*loopback* (localhost)|
+|169.254.0.0 / 16 |APIPA ( *Automatic Private IP Addressing* - Endereço autoatribuído)|
+|0.0.0.0/8 |Endereço de inicialização|
+|255.255.255.255 |Broadcast|
 
 
 ### Classe D

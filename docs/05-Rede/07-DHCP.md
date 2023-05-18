@@ -2,6 +2,19 @@
 
 # DHCP
 
+O DHCP (*Dinamic Host Configuration Protocol*) é um protocolo de camada de aplicação, utilizado para atribuição de endereços IP a dispositivos ligados a uma rede de computadores. Utiliza o UDP como protocolo de camada de transporte, com as portas 67 e 68. Utiliza a arquitetura Cliente/Servidor, onde o cliente solicita um endereço IP a um Servidor, este responsável por fornecer os endere;os.
+
+Com a utilização do DHCP, os *hosts* podem solicitar a um servidor um IP para que configurem em suas máquinas. Este processo permite que a definição dos IP's seja automática, simplificando o processo de configuração de endereços a dispositivos em uma rede.
+
+Além do endereço IP, outras informações também podem ser obtidas utilizando este protocolo. Dados como máscara de sub-rede, *gateway* padrão e servidores DNS. Utilizando estes dados é possivel que máquina tenha plena funcionalidade a acessos básicos à rede.
+
+O processo de liberação de um endereço IP utilizando o DHCP segue as seguintes etapas:
+
+1. Descoberta: 
+1. Oferta
+1. Solicitação
+1. Concessão
+
 
 
 ## Referências

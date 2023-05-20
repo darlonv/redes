@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # TCP
 
 O TCP (*Transmission Control Protocol*) é um protocolo **orientado a conexão**. Seu funcionamento opera em três fases:

@@ -1,11 +1,9 @@
----
-sidebar_position: 1
----
+
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Introdução às Redes de Computadores
+# Introdução
 
 Este conteúdo trata-se de material de apoio para a disciplina de Redes de Computadores. É um material incompleto, e sempre estará em construção.
 
@@ -16,8 +14,6 @@ O desenvolvimento deste material deu-se tendo como referências bibliográficas 
 
 <!-- ([KUROSE 2021](https://plataforma.bvirtual.com.br/Acervo/Publicacao/198909)) -->
 
-
-aaabbccc
 
 <!-- 
 <details>

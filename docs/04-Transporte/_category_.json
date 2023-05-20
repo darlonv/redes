@@ -1,9 +1,0 @@
-{
-  "label": "Transporte",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Protocolos de camada de transporte"
-  }
-}
-  

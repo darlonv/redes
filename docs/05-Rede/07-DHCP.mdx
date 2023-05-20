@@ -11,7 +11,7 @@ Além do endereço IP, outras informações também podem ser obtidas utilizando
 
 O processo de liberação de um endereço IP utilizando o DHCP segue as seguintes etapas:
 
-1. Descoberta `DHCP Discover` (*Discover*):  o cliente DHCP envia uma mensagem de descoberta para encontrar servidores DHCP disponíveis na rede. Essa mensagem é normalmente um pacote de *broadcast* (endereço IP de destino 255.255.255.255) que é enviado em uma rede local. O objetivo é permitir que o cliente encontre um servidor DHCP e solicite um endereço IP. Caso não haja um servidor DHCP na rede, o roteador da rede pode ser configurado para repassar este pacote para o servidor <Bib bib='tanenbaum_2011' page='294'/>.
+1. Descoberta `DHCP Discover` (*Discover*):  o cliente DHCP envia uma mensagem de descoberta para encontrar servidores DHCP disponíveis na rede. Essa mensagem é normalmente um pacote de *broadcast* (endereço IP de destino 255.255.255.255) que é enviado em uma rede local. O objetivo é permitir que o cliente encontre um servidor DHCP e solicite um endereço IP. Caso não haja um servidor DHCP na rede, o roteador da rede pode ser configurado para repassar este pacote para o servidor <Bib bib='tanenbaum_2011_book' page='294'/>.
 1. Oferta - `DHCP Offer` (*Offer*): Nesta fase, o servidor DHCP recebe a mensagem de descoberta e respondem com uma oferta de endereço IP disponível. Cada servidor DHCP que recebe a mensagem de descoberta pode responder com uma oferta contendo informações de configuração, como o endereço IP proposto, a máscara de sub-rede, o *gateway* padrão, os servidores DNS e outros parâmetros de rede. O cliente DHCP pode receber várias ofertas de diferentes servidores DHCP.
 1. Solicitação `DHCP Request` (*Request*): Após receber as ofertas de diferentes servidores DHCP, o cliente DHCP seleciona uma oferta específica e envia uma solicitação ao servidor escolhido. A solicitação informa qual oferta o cliente aceitou. Isso é feito para evitar conflitos de endereços IP. A solicitação é enviada por *broadcast* para que todos os servidores DHCP saibam que a oferta foi aceita.
 1. Concessão `DHCP ACK` (*Acknowledgement*): Nesta última fase, o servidor DHCP que recebeu a solicitação envia uma mensagem de confirmação (conhecida como ACK) ao cliente DHCP. Essa mensagem confirma a atribuição do endereço IP e quaisquer outras informações de configuração. Além disso, também informa ao cliente DHCP o tempo de validade do endereço IP atribuído. O cliente, então, configura seu endereço IP de acordo com as informações recebidas na mensagem de confirmação.
@@ -79,7 +79,7 @@ Esse processo de renovação de tempo é repetido periodicamente enquanto o disp
 
 TANENBAUM, A.S., Wetherall, D. Redes de Computadores. 5. ed. São Paulo: Pearson do Brasil, 2013.
 
-<Bib bib='tanenbaum_2011' type='abnt'/><br/>
+<Bib bib='tanenbaum_2011_book' type='abnt'/><br/>
 
 **Outros materiais**  
 [](https://support.huawei.com/enterprise/en/doc/EDOC1100112351/4b2f29de/how-a-dhcp-client-renews-its-ip-address-lease)  

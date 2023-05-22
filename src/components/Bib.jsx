@@ -18,6 +18,15 @@ export default function Bib({bib, page, type, inline=false, link=false}) {
       ['cite']: 'TORRES 2009',    
       ['abnt']: 'TORRES, G. Redes de Computadores. Rio de Janeiro: Novaterra, 2009. ISBN 978-85-61893-05-7.',
     },
+    ['stevens_1994_book']   : {
+      ['cite']: 'STEVENS 1994',    
+      ['abnt']: 'STEVENS, W. R. TCP/IP Illustrated, Volume 1: The Protocols. Boston, USA: Addison-Wesley/Pearson Education, 1994. ISBN 0-201-63346-9.',
+    },
+    ['rfc_791_site']   : {
+      ['cite']: 'IETF 1981',    
+      ['abnt']: 'IETF. RFC 791: Internet Protocol. 1981.',
+      ['link']: 'https://datatracker.ietf.org/doc/html/rfc791',
+    },
   }
 
   let data;

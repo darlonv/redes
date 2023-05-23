@@ -253,7 +253,7 @@ Term
 
 
 
-**Outras referências**  
+**Outros materiais**  
 [Wikimedia Commons. Three-way handshake.](https://upload.wikimedia.org/wikipedia/commons/8/8a/Tcp-handshake.png)  
 [Wikimedia Commons. TCP Header.](https://commons.wikimedia.org/wiki/File:TCP_Protocol_Diagram.png)  
 [BEZERRA, R. M. A camada de transporte. Notas de aula: Redes de computadores II. CEFET/BA, 2008](https://egroupware.ufba.br/~romildo/downloads/ifba/transporte.pdf)  

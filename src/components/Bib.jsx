@@ -50,6 +50,11 @@ export default function Bib({bib, page, type, inline=false, link=false}) {
       //Caso não seja inline, coloca parênteses antes e depois
       data = '('+data+')';
     }
+
+    if(link){
+      //referência com link
+      data = <a href={base[bib]['link']} target='_blank'>{data}</a>
+    }
     
   }else{
     //Bibliografia

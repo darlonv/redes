@@ -63,9 +63,8 @@ class IP:
         return broadcast
     
     def bin2dd(self, ip_bin):
-        ip = ''
         
-        ip+= str(self.bin2dec(ip_bin[0:8]))+'.'
+        ip = str(self.bin2dec(ip_bin[0:8]))+'.'
         ip+= str(self.bin2dec(ip_bin[8:16]))+'.'
         ip+= str(self.bin2dec(ip_bin[16:24]))+'.'
         ip+= str(self.bin2dec(ip_bin[24:32]))
@@ -80,7 +79,7 @@ class IP:
             ip_bin = self.ip_dec2bin(ip)
             yield self.bin2dd(ip_bin)
 
-x = IP('192.168.15.100/28')
+x = IP('192.168.15.100/27')
 
 print('IP           :', x.ip)
 print('Mask         :', x.mask)

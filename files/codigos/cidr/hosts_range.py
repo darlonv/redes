@@ -1,7 +1,7 @@
 class IP:
-    ip_bin = None
-    mask_bin = None
-    ip_network_bin = '0'*32
+    ip_bin           = '0'*32
+    mask_bin         = '0'*32
+    ip_network_bin   = '0'*32
     ip_broadcast_bin = '1'*32
     
     ip = ''

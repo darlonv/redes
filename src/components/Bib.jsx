@@ -27,6 +27,16 @@ export default function Bib({bib, page, type, inline=false, link=false}) {
       ['abnt']: 'IETF. RFC 791: Internet Protocol. 1981.',
       ['link']: 'https://datatracker.ietf.org/doc/html/rfc791',
     },
+    ['rfc_1058_site']   : {
+      ['cite']: 'IETF 1988',    
+      ['abnt']: 'IETF. RFC 1058: Routing Information Protocol. 1988.',
+      ['link']: 'https://datatracker.ietf.org/doc/html/rfc1058',
+    },
+    ['rfc_1131_site']   : {
+      ['cite']: 'IETF 1989',    
+      ['abnt']: 'IETF. RFC 1131: The OSPF Specification. 1989.',
+      ['link']: 'https://datatracker.ietf.org/doc/html/rfc1131',
+    },
   }
 
   let data;

@@ -1,0 +1,81 @@
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import Bib from '@site/src/components/Bib';
+
+# Containers
+
+Para a execução de um comando docker, a sintaxe geral é:
+
+```bash
+docker <parâmetros>
+```
+
+Um *container* é uma instância de uma *imagem*. Podemos fazer uma analogia dos containers e imagens com os objetos e classes da orientação a objetos. Para que um container possa ser executado, é necessário que seja informado a partir de qual imagem ele deve ser executado.
+
+**Exemplo**
+- *Hello world*
+```bash
+docker run hello-world
+```
+
+Neste caso, o parâmetro `run` indica que um container será criado a partir da imagem `hello-world`.
+
+
+Observe que o container é criado, executado e encerrado.
+
+Para observarmos os containers em execução:
+
+```bash
+docker container ps
+```
+
+ou então, de maneira simplificada:
+```bash
+docker ps
+```
+Caso a saída esteja vazia, é porque não há nenhum container em execução no momento.
+
+Para que sejam visualizados todos os containers:
+
+```bash
+docker ps -a
+```
+Saída:
+```
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                          PORTS                                            NAMES
+3b9de5ab5855   hello-world          "/hello"                 20 minutes ago   Exited (0) About a minute ago                                                    upbeat_euler
+```
+
+Algumas podem ser observadas aqui:
+- `CONTAINER ID`: identificação única do container, gerada automaticamente;
+- `IMAGE`: Imagem utilizada para o container
+- `COMMANDO`: Comando executado ao inicializar o container
+- `NAMES`: Nome único para o conteiner.
+
+O nome do container pode ser informado durante a criação do container, utilizando o parâmetro `--name`.
+
+```bash
+docker run --name hello hello-world
+```
+Após a execução, podemos visualizar o que foi criado:
+
+```bash
+docker ps -a
+```
+
+Saída:
+```
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                         PORTS                                            NAMES
+3da575d7b1b5   hello-world          "/hello"                 3 seconds ago    Exited (0) 2 seconds ago                                                        hello
+3b9de5ab5855   hello-world          "/hello"                 26 minutes ago   Exited (0) 7 minutes ago                                                        upbeat_euler
+```
+Observe que um novo `CONTAINER ID` foi gerado, e o nome do container foi o informado (`hello`).
+
+
+
+
+
+## Referências
+

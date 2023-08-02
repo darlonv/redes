@@ -278,3 +278,15 @@ Observe que na máquina *host* o conteúdo foi enviado à porta `10000`, enquant
 
 
 
+## create
+
+Anteriormente vimos que o `docker run` cria e executa um container. Estes passos também podem ser executados de maneira separada, com `docker create`.
+
+```bash
+docker create --name hello hello-world
+docker ps -a
+#CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS       PORTS                    NAMES
+#b39f77f25849   hello-world          "/hello"                 15 seconds ago   Created                               hello
+
+docker start -a hello
+```

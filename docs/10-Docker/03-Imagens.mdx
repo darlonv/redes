@@ -147,11 +147,51 @@ nc localhost 10100 <<< "Hello world"
 #<ctrl+c para fechar>
 ```
 
-
 **Atividade**
 - Desenvolva uma imagem com o nome `comp`, e tag `1.0`.
     - Faça com que quando um container da imagem `comp` for executado, a mensagem `Olá pessoal da computação.` seja mostrada.
-- Desenvolva uma imagem com nome `streamlit` e tag `0.1`, contendo as bibliotecas necessárias para execução deste framework Python.
+
+## COPY
+
+A instrução `COPY` indica para ser realizada a cópia de um arquivo para dentro da imagem.
+
+**Sintaxe**
+
+```
+COPY <arquivo host> <local na imagem>
+```
+
+**Exemplo**
+- Copia o arquivo *requirements.txt* do diretório local no *host* para o diretório */root* dentro da imagem.
+```
+COPY requirements.txt /root
+```
+
+
+
+**Atividade**
+- Desenvolva uma imagem com nome `streamlit` e tag `0.1`, contendo as bibliotecas necessárias para execução deste *framework* Python.
+
+## WORKDIR
+
+O `WORKDIR` indica qual será o diretório inicial em que o container terá seu comando executado
+
+**Exemplos**
+```
+FROM ubuntu
+WORKDIR /src
+CMD ["pwd"]
+```
+
+```
+FROM ubuntu
+WORKDIR /etc
+CMD ["ls"]
+```
+
+**Atividades**
+
+- Crie um repositório no GitHub e coloque nele seu arquivo com o código python usando a biblioteca streamlit. Quando um container com a sua imagem for criado, o repositório deve ser clonado e o servidor streamlit com esse arquivo deve ser executado.
 
 
 ## Referências

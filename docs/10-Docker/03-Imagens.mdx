@@ -28,7 +28,7 @@ Observe que as imagens possuem `REPOSITORY`, `TAG` e `IMAGE ID`. O `ID` da image
 
 ## Dockerfile
 
-Um `Dockerfile` (por padrão `D` maiúscula e sem extesnão) é um arquivo texto que contém as instruções a serem executadas para a criação de uma imagem. Arquivos `Dockerfile` são lidos pelo comando `docker build`.
+Um `Dockerfile` (por padrão, letra `D` maiúscula e sem extensão) é um arquivo texto que contém as instruções a serem executadas para a criação de uma imagem. Arquivos `Dockerfile` são lidos pelo comando `docker build`.
 
 **Exemplo**
 -  Container com netcat
@@ -39,6 +39,13 @@ FROM ubuntu
 RUN apt update
 RUN apt -y install netcat
 ```
+
+## FROM
+A diretiva `FROM` indica a partir de qual imagem a nova imagem será criada.
+
+## RUN
+
+A diretiva `RUN` indica que um comando deverá ser executado. É comum que seja utilizado para instalação e configuração de softwares e bibliotecas.
 
 ## build
 
